@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get "/creatures/:id/edit" => "creatures#edit", as: "edit_creature"
   patch "/creatures/:id" => "creatures#update"
 
-  delete "/creature/:id" => "creatures#"
+  delete "/creatures/:id" => "creatures#destroy", as: "delete_creature"
 end
