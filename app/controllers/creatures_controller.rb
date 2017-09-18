@@ -12,9 +12,19 @@ class CreaturesController < ApplicationController
       redirect_to creature_path(creature)
       end
   end
-
   def show
     @creature = Creature.find_by_id(params[:id])
+  end
+
+  def edit
+    creature_id = params[:id]
+    @creature = Creature.find_by_id(creature_id)
+  end
+  def update
+    creature_id = params[:id]
+    creature = Creature.find_by_id(creature_id)
+    creature.update_attributes(creature_params)
+    redirect_to creature_path(creature)
   end
 
   private
