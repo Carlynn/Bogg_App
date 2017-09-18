@@ -1,8 +1,14 @@
-<%= form_for @creature do |f| %>
-  <span>Creature Name: </span>
-  <%= f.text_field :name, required: true %><br>
-  <span>Description: </span>
-  <%= f.text_field :description, required: true %><br>
-  <button class='btn'>Save the Creature</button>
-  <!-- #<%= f.submit "Save Creature" %> -->
-<% end %>
+<div>
+  <h1 style="text-align:center; font-family: 'Anton', sans-serif; padding-bottom: 20px">ADD YOUR FAVORITE MARVEL CHARACTER</h1>
+</div>
+<div class="container">
+  <%= form_for @creature do |f| %>
+  <span>Character Image: </span>
+  <%= f.url_field :image, required: true %><br>
+    <span>Name: </span>
+    <%= f.text_field :name, required: true %><br>
+    <span>Description: </span>
+    <%= f.text_field :description, required: true %><br>
+    <button class='btn'>Save Character</button>
+  <% end %>
+</div>

@@ -1,8 +1,11 @@
 <img class="responsive-img" style="margin-top: -20px; margin-bottom: 20px" src="https://www.hdwallpapers.in/download/avengers_age_of_ultron_team-3840x1200.jpg">
 
-  <% @creatures.each do |creature| %>
-  <div class="row">
-          <div class="col m4">
+<div>
+  <h1 style="text-align:center; font-family: 'Anton', sans-serif; padding-bottom: 20px">WHO IS YOUR FAVORITE MARVEL CHARACTER?</h1>
+</div>
+  <div class="row valign" style="vertical-align:top">
+    <% @creatures.each do |creature| %>
+          <div class="col s4 valign" style="vertical-align:top">
             <div class="card hoverable">
               <div class="card-image">
                 <img src="<%= creature.image %>">
@@ -16,5 +19,5 @@
               </div>
             </div>
           </div>
+          <% end %>
         </div>
-    <% end %>
