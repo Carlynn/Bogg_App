@@ -1,9 +1,20 @@
-<h1>Creatures</h1>
-<ol>
-  <% @creatures.each do |creature| %>
-  <li><%= creature.name %><br>
-      <%= creature.description %>
+<img class="responsive-img" style="margin-top: -20px; margin-bottom: 20px" src="https://www.hdwallpapers.in/download/avengers_age_of_ultron_team-3840x1200.jpg">
 
-    </li><br>
+  <% @creatures.each do |creature| %>
+  <div class="row">
+          <div class="col m4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="<%= creature.image %>">
+                <span class="card-title"><%= creature.name %></span>
+              </div>
+              <div class="card-content">
+                <p><%= creature.description %></p>
+              </div>
+              <div class="card-action">
+                <%= link_to "Update #{creature.name}", "/creatures/#{creature.id}/edit" %>
+              </div>
+            </div>
+          </div>
+        </div>
     <% end %>
-</ol>

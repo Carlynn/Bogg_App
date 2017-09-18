@@ -1,3 +1,18 @@
-<h1><%= @creature.name %></h1>
-<p><%= @creature.description %></p>
-<%= button_to "Delete", @creastures, method: :delete%>
+
+  <div class="row">
+          <div class="col s6 offset-s3 valign">
+            <div class="card">
+              <div class="card-image">
+                <img src="<%= @creature.image %>">
+                <span class="card-title"><%= @creature.name %></span>
+              </div>
+              <div class="card-content">
+                <p><%= @creature.description %></p>
+              </div>
+              <div class="card-action">
+                <button class="btn red"><%=link_to "Delete", @creatures, method: :delete%></button>
+                <button class="btn"><%=link_to "HOME", creatures_path%></button>
+              </div>
+            </div>
+          </div>
+        </div>
